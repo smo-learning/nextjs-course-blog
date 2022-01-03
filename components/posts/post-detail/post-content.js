@@ -14,7 +14,9 @@ export default function PostContent({ post }) {
         },
         code(code) {
             const { language, children } = code;
-            return <SyntaxHighlighter style={atomDark} language={language} children={children} />
+            return <SyntaxHighlighter style={atomDark} language={language}>
+                {children}
+            </SyntaxHighlighter>
         }
     }
 
